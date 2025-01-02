@@ -7,6 +7,11 @@
     <title>Laravel 11 | Show</title>
 </head>
 <body>
-    <h1>Aquí se muestra un post <?= $post ?> </h1>
+    
+    <h1>Aquí se muestra un post {{ $post }}</h1>
+
+    @if (false)
+        <p>Contenido de prueba</p>
+    @endif
 </body>
 </html>

@@ -13,3 +13,7 @@ Route::get('/', function(){
 Route::get('/posts', function(){
     return "Aquí van los post";
 });
+
+Route::get('/posts/{post}', function ($post) {
+    return "Aquí se mostrará el post con parámetro {$post}";
+});

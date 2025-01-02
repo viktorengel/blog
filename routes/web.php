@@ -20,7 +20,7 @@ Route::get('/posts/{post}', function ($post) {
     return "Aquí se mostrará el post con parámetro {$post}";
 }); */
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', HomeController::class);
 
 Route::get('/posts', [PostController::class, 'post']);
 Route::get('/posts/create', [PostController::class, 'create']);

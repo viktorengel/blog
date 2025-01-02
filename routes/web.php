@@ -1,12 +1,13 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /* Route::get('/', function () {
     return view('welcome');
 }); */
 
-Route::get('/', function(){
+/* Route::get('/', function(){
     return "Hola amigos";
 });
 
@@ -16,4 +17,6 @@ Route::get('/posts', function(){
 
 Route::get('/posts/{post}', function ($post) {
     return "Aquí se mostrará el post con parámetro {$post}";
-});
+}); */
+
+Route::get('/', [HomeController::class, 'index']);

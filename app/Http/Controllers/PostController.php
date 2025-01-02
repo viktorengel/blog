@@ -6,15 +6,17 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    public function post(){
-        return "Post usando un controllador";
+    public function index(){
+        return view('posts.index');
     }
 
     public function create(){
-        return "Formulario creación de post";
+        return view('posts.create');
     }
 
     public function show($post){
-        return "Aquí se muestra el texto $post";
+        return view('posts.show', [
+            'post' => $post
+        ]);
     }
 }

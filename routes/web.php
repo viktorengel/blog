@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 /* Route::get('/', function () {
@@ -20,3 +21,7 @@ Route::get('/posts/{post}', function ($post) {
 }); */
 
 Route::get('/', [HomeController::class, 'index']);
+
+Route::get('/posts', [PostController::class, 'post']);
+Route::get('/posts/create', [PostController::class, 'create']);
+route::get('/posts/{post}', [PostController::class, 'show']);
